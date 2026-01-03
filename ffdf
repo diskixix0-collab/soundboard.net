@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Soundboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 150px);
+      gap: 15px;
+    }
+    button {
+      padding: 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #444;
+      color: white;
+    }
+    button:hover {
+      background: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="board">
+  <button onclick="playSound('sound1.mp3')">Sound 1</button>
+  <button onclick="playSound('sound2.mp3')">Sound 2</button>
+  <button onclick="playSound('sound3.mp3')">Sound 3</button>
+</div>
+
+<script>
+  function playSound(file) {
+    const audio = new Audio(file);
+    audio.play();
+  }
+</script>
+
+</body>
+</html>
